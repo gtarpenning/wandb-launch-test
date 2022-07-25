@@ -5,7 +5,7 @@ wandb.init(project='requests-remote')
 
 try:
 	r = requests.get("https://www.wandb.ai")
-	print(f"{r.response_code=} -- {r.text=}")
+	print(f"{r.status_code=} -- {r.text=}")
 except Exception as e:
 	print("Unable to connect to url")
 	print(e)
