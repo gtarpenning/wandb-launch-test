@@ -3,8 +3,8 @@ import requests
 
 wandb.init(project='requests-remote')
 
-r = requests.get("www.wandb.ai")
-print(r.text)
+// r = requests.get("www.wandb.ai")
+print("Belly")
 
-wandb.log({"text-len":len(r.text), "code":r.response_code})
+wandb.log({"text-len":12, "code":404})
 
