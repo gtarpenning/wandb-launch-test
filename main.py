@@ -2,9 +2,9 @@ import wandb
 import requests
 
 try:
-	wandb.init(project='requests-remote')
+	wandb.init()
 except Exception as e: 
-	print("Couldn't load wandb... \n {e}")
+	print(f"Couldn't load wandb... \n {e}")
 
 import os
 
