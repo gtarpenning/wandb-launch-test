@@ -13,4 +13,7 @@ print(r.status_code)
 
 print(f"{os.listdir()=}")
 
-wandb.log({"text-len":121, "code":402})
+try:
+	wandb.log({"text-len":121, "code":402})
+except Exception as e:
+	print(e)
