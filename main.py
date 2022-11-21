@@ -8,9 +8,9 @@ parser.add_argument("--debug", type=bool, default=True, help="sets base_url")
 args = parser.parse_args()
 
 settings = wandb.Settings()
-settings.update({"enable_job_creation":True, "start_method":"fork"})
+settings.update({"enable_job_creation":True})
 if args.debug:
-	settings.update({"base_url": "https://api.wandb.test"})
+	settings.update({"base_url": "https://api.wandb.test:9015"})
 
 run = wandb.init(settings=settings)
 print(f"Started run with api: {wandb.Settings().base_url=}")
